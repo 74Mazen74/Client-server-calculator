@@ -1,9 +1,9 @@
 import socket
-
+import sys
 # SERVER = input()
 # PORT = int(input())
-SERVER = "127.0.0.1"
-PORT = 6669
+SERVER = str(sys.argv[1])
+PORT = int(sys.argv[2])
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.settimeout(0.5)
 
