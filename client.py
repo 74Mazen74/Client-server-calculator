@@ -3,7 +3,7 @@ import socket
 # SERVER = input()
 # PORT = int(input())
 SERVER = "127.0.0.1"
-PORT = 6665
+PORT = 6669
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.settimeout(0.5)
 
@@ -14,6 +14,7 @@ try:
 	print("Type 'Over' to terminate")
 except:
 	exit("Server busy")
+client.settimeout(10000)
 
 while True:
 	try:
