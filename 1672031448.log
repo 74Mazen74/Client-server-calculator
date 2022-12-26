@@ -1,0 +1,23 @@
+[1672031448] Server started
+[1672031448] Waiting for any client request...
+[1672031452] New Client Connected
+[1672031452] New child created to serve client number 1
+	[1672031453] Equation = 7 is recievied from client number 1
+	[1672031453] Equation is solved
+	[1672031453] Sending result = 7 to client
+	[1672031453] Response sent successfully to client number 1
+[1672031456] New Client Connected
+[1672031456] New child created to serve client number 2
+	[1672031458] Equation = 1 is recievied from client number 2
+	[1672031458] Equation is solved
+	[1672031458] Sending result = 1 to client
+	[1672031458] Response sent successfully to client number 2
+[1672031459] Client number 1 connection is Over
+[1672031461] Client number 2 connection is Over
+[1672031470] New Client Connected
+[1672031470] New child created to serve client number 3
+	[1672031471] Equation = 4 is recievied from client number 3
+	[1672031471] Equation is solved
+	[1672031471] Sending result = 4 to client
+	[1672031471] Response sent successfully to client number 3
+[1672031473] Client number 3 connection is Over
