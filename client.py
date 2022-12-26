@@ -1,15 +1,26 @@
 import socket
-import sys
+import argparse
+
+parser = argparse.ArgumentParser(description='Multiple Clients Server app')
+parser.add_argument('-d','--address', help='Address to start server on', required=True)
+parser.add_argument('-p','--port', help='Port to start listening on', required=True)
+
+# SERVER = "127.0.0.1"
+# PORT = 6060
+
 # SERVER = input()
 # PORT = int(input())
-SERVER = str(sys.argv[1])
-PORT = int(sys.argv[2])
+
+args = vars(parser.parse_args())
+SERVER = str(args['address'])
+PORT = int(args['port'])
+
 client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client.settimeout(0.5)
-
 try:
 	client.connect((SERVER, PORT))
 	answer = client.recv(1024)
+	print(answer.decode())
 	print("Example : 4 + 5")
 	print("Type 'Over' to terminate")
 except:
@@ -28,7 +39,7 @@ while True:
 
 	answer = client.recv(1024)
 
-	print("Answer is "+answer.decode())
+	print(answer.decode())
 	
 
 client.close()
